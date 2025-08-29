@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">MARS<span>°</span> <small>IT School</small></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Learning</a>
+      <a href="#" class="active">Shop</a>
+    </nav>
+    <button class="post-btn">+ Post yaratish</button>
+  </header>
+
+  <!-- Search section -->
+  <section class="search-bar">
+    <h2>Magazin</h2>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="search....">
+      <button onclick="searchItems()">click</button>
+    </div>
+    <div class="history">🕒 Haridlar tarixi</div>
+  </section>
+
+  <!-- Products -->
+  <section class="products" id="productList">
+    <!-- Har bir product card -->
+ 
+
+
+    <div class="card">
+  <img src="./img/AKUMLYATOR.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+    <div class="card">
+  <img src="./img/KEYBORD.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+
+    <div class="card">
+  <img src="./img/FLESH.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+
+    <div class="card">
+  <img src="./img/PODS.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+    <div class="card">
+  <img src="./img/MOUSE.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+    <div class="card">
+  <img src="./img/SMART WATCH.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+    <div class="card">
+  <img src="./img/KEYBORD STICKER.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+    <div class="card">
+  <img src="./img/MOUSE.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+    <div class="card">
+  <img src="./img/FLESH.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+
+    <div class="card">
+  <img src="./img/AKUMLYATOR.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+
+    <div class="card">
+  <img src="img/PODS.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+
+    <div class="card">
+  <img src="./img/AKUMLYATOR.png" alt="Mars rug">
+  <h3>Mars rug</h3>
+  <p class="price">💰 100 Coins</p>
+  <p class="stock">24 dona mavjud</p>
+  <button class="buy-btn" onclick="openModal('Mars rug')">Sotib olish</button>
+</div>
+
+
+
+    
+  </section>
+
+
+<div id="buyModal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle">Mahsulot sotib olish</h3>
+    <p>Iltimos ID raqamingizni kiriting:</p>
+    <input type="text" id="userIdInput" placeholder="ID kiriting...">
+    <div>
+      <button class="confirm-btn" onclick="confirmPurchase()">Tasdiqlash</button>
+      <button class="close-btn" onclick="closeModal()">Bekor qilish</button>
+    </div>
+    <p id="confirmationMsg" style="margin-top:10px; font-weight:bold; color:green; display:none;">
+      ✅ Mahsulot qabul qilindi!
+    </p>
+  </div>
+</div>
+
+
+
+
+  <footer>
+    <p>MARS IT School 2022</p>
+    <a href="#">Politika конфиденциальности</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
